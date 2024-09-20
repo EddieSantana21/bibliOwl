@@ -73,11 +73,13 @@ body {
     font-size: 13px;
     color: #555;
     transition: all linear 160ms;
+    text-decoration: none;
 }
 
 .formLogin a:hover {
     color: #f72585;
 }
+
 
 .form-control{
     padding: 15px;
@@ -105,4 +107,9 @@ body {
 .btn:hover {
     transform: scale(1.05);
     background-color: #ff0676;
+}
+
+.text-criar-conta{
+    text-align: center;
+    margin-top: 10px;
 }
