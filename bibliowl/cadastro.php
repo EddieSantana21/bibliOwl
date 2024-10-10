@@ -36,8 +36,7 @@
                     </select>
                 </div>
                 
-                <a href="cadastro 2.html" class="btn">Avançar</a>
-                <!--<input type="button" value="Avançar" class="btn" />-->
+                <a href="cadastro 2.php" class="btn">Avançar</a>
             </form>
         </div>
     </section>
