@@ -30,7 +30,7 @@
 
                 
                 <a href=".html" class="btn">Avançar</a>
-                <a href="cadastro 2.html" class="btn">Voltar</a>
+                <a href="cadastro 2.php" class="btn">Voltar</a>
             </form>
         </div>
     </section>
