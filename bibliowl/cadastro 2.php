@@ -36,8 +36,8 @@
                 <label for="nome">Insira uma foto de perfil </label>
                 <input type="file" placeholder="Insira sua foto" autofocus="true" class="ft" />
                 
-                <a href="cadastro3.html" class="btn">Avançar</a>
-                <a href="cadastro.html" class="btn">Voltar</a>
+                <a href="cadastro3.php" class="btn">Avançar</a>
+                <a href="cadastro.php" class="btn">Voltar</a>
                 
             </form>
         </div>
