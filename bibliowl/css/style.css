@@ -210,3 +210,7 @@ body {
   .step.active {
     background-color: #a64ca6; 
   }
+
+  #imagePreview {
+    object-fit: cover; /* Corta a imagem para caber no contêiner */
+}
