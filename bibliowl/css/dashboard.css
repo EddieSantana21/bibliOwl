@@ -1,0 +1,248 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: auto;
+}
+
+.sidebar {
+    width: 15%; 
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto; 
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px 5px;
+    width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+nav ul li i {
+    margin-right: 10px;
+}
+
+nav ul li.active {
+    border-color: #ccc;
+}
+
+nav ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.emprestimo {
+    width: 60%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.livros {
+    width: 95%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.populares {
+    width: 95%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.emprestimo h2, .livros h2, .populares h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.book-section {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-botoes {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.livro-lista {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+}
+
+.livro-lista {
+    flex-wrap: wrap;
+}
+
+.livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 23%;
+}
+
+.livro img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.livro h3 {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.livro-imagem {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.livro-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+}
+
+.livro-info h2 {
+    margin: 0 0 10px;
+    font-size: 15px;
+}
+
+.livro-info p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    max-width: 700px;
+}
+
+.ver-mais {
+    width: auto;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #696969;
+    color: white;
+    font-size: 12px;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: inline-block;
+}
+
+.ver-mais i {
+    margin-right: 5px;
+}
+
+.ver-mais:hover {
+    background-color: #555;
+    border-color: #ccc;
+}
+
+.ver-mais:active {
+    background-color: #444;
+    border-color: #bbb;
+}
+
+.estrelas i {
+    color: #ccc;
+}
+
+.estrelas i.active {
+    color: gold;
+}
+
+.categoria-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+}
+
+.categoria, .navegacao {
+    padding: 5px 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.categoria:hover, .navegacao:hover {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+}
+
+.categoria.active, .navegacao.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
