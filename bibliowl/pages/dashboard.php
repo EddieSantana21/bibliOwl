@@ -40,8 +40,37 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <button class="ver-mais"><i class="fas fa-book-open"></i> Ver mais</button>
+                    <button class="modalBtn"><i class="fas fa-book-open"></i> Ver mais</button>
                 </div>
+            </div>
+            <div class="modal-info">
+                <div class="info">
+                    <img src="../assets/livro1.jfif" alt="Capa do Livro" class="livro-imagem">
+                    <div class="livro-info">
+                    <h2>O Pequeno Príncipe</h2>
+                    <p>Um piloto cai com seu avião no deserto e ali encontra uma criança loura e frágil. Ela diz ter vindo de um pequeno planeta distante. E ali, na convivência com o piloto perdido, os dois repensam os seus valores e encontram o sentido da vida....</p>
+                        <div class="estrelas">
+                            <h2>Sobre</h2>
+                            <p>O pequeno príncipe é um clássico da literatura infantil que narra a amizade entre um menino e um piloto de avião. O principezinho vem do asteroide B 612, e encontra o piloto no deserto do Saara. A obra fala de amor, amizade e sobre a sabedoria infantil.</p>
+                            <h2>Autor</h2>
+                            <p>Antoine de Saint-Exupéry</p>
+                            <h2>Editora</h2>
+                            <p>Nova Fronteira</p>
+                            <h2>Publicado em:</h2>
+                            <p>31 de outubro de 2016</p>
+                            <h2>ISBN-10</h2>
+                            <p>852093014X</p>
+                            <h2>ISBN-13</h2>
+                            <p>978-8520930144</p>
+                            <h2>Quantidade de páginas</h2>
+                            <p>96 Páginas</p>
+                            <h2>Idioma</h2>
+                            <p>Português</p>
+                            <h2>Idade de leitura</h2>
+                            <p>Idade sugerida para a leitura deste livro é a partir 10 anos</p>
+                        </div>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -207,6 +236,7 @@
 
     </div>
     <script src="./src/scripts.js"></script>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
