@@ -1,0 +1,54 @@
+:root {
+  --secondary-color: #005065;
+  --surface-variant: #E7E0EC;
+  --on-surface: #1D1A22;
+  --on-secondary: #fff;
+  --inverse-surface: #322F37;
+  --opacity-8: rgba(29, 26, 34, 0.2);
+}
+
+.sidebar {
+  width: 18%; 
+  background-color: var(--surface-variant);
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto; 
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px 5px;
+  width: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--on-surface);
+}
+
+nav ul li i {
+  margin-right: 10px;
+}
+
+nav ul li.active {
+  background-color: var(--secondary-color);
+  color: var(--on-secondary);
+}
+
+nav ul li:hover {
+  background-color: var(--opacity-8);
+  color: var(--inverse-surface);
+}

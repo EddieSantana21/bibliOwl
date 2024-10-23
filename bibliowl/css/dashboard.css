@@ -7,49 +7,6 @@ body {
     overflow: auto;
 }
 
-.sidebar {
-    width: 15%; 
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100vh;
-    overflow-y: auto; 
-}
-
-.logo {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 5px 5px;
-    width: 100px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-nav ul li i {
-    margin-right: 10px;
-}
-
-nav ul li.active {
-    border-color: #ccc;
-}
-
-nav ul li:hover {
-    background-color: #e0e0e0;
-}
-
 .main-content {
     flex-grow: 1;
     display: flex;

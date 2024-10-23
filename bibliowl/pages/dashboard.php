@@ -4,24 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>""</title>
+    <title>Início</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../components/sidebar/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <div class="sidebar">
-        <img src="../assets/logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li class="active"><i class="fas fa-home"></i> Início</li>
-                <li><i class="fas fa-bell"></i> Notificação</li>
-                <li><i class="fas fa-book"></i> Empréstimo</li>
-                <li><i class="fas fa-heart"></i> Match</li>
-                <li><i class="fas fa-cog"></i> Configurações</li>
-            </ul>
-        </nav>
-    </div>
+    <?php require_once"../components/sidebar/sidebar.php";?>
     <div class="main-content">
         <header>
             <input type="text" class="search-bar" placeholder="Pesquisar...">
