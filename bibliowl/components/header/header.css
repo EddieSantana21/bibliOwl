@@ -1,0 +1,46 @@
+:root {
+    --surface-variant: #E8DFF1;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 12px 0 12px;
+}
+
+header input {
+    width: 80%;
+    height: 36px;
+    border-radius: 16px;
+    border: none;
+    background-color: var(--surface-variant);
+    padding: 16px;
+}
+
+.nav-perfil {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-perfil h4 {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+}
+
+.nav-perfil .ul-perfil {
+    display: none;
+}
+
+.nav-perfil figure {
+    margin: 0 0 0 8px;
+    padding: 0;
+}
+
+.nav-perfil figure img {
+    width: 65%;
+    margin: 6px;
+}
