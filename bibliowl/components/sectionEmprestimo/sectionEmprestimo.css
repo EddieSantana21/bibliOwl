@@ -1,10 +1,21 @@
+:root {
+    --tertiary: #5C0049;
+    --opacity-16: rgba(92, 0, 73, 0.16);
+
+}
+
 .emprestimo {
     padding: 0 20px 0 20px;
 }
 
+.emprestimo h1 {
+    font-size: 20px;
+}
+
 .emprestimo .card-emprestimo {
-    padding: 24px;
+    padding: 16px;
     display: flex;
+    align-items: center;
 }
 
 .emprestimo .card-emprestimo article {
@@ -15,13 +26,33 @@
     justify-content: center;
 }
 
-.emprestimo h1 {
-    font-size: 20px;
+.emprestimo .card-emprestimo article h3 {
+    font-weight: 500;
 }
 
+.emprestimo .card-emprestimo article p {
+    padding: 1% 0 1% 0;
+    width: 80%;
+}
+
+.emprestimo .card-emprestimo article button {
+    width: 14%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--opacity-16);
+    color: var(--tertiary);
+    font-weight: 600;
+}
 
 .emprestimo .img-emprestimo {
-    width: 90px;
-    height: 120px;
-    background-color: aqua;
+    width: 100px;
+    height: 130px;
+    overflow: hidden;  /* Garante que a imagem se ajuste corretamente */
+}
+
+.emprestimo .img-emprestimo img {
+    width: 100%;   /* A imagem vai ocupar 100% da largura da div */
+    height: 100%;  /* A imagem vai ocupar 100% da altura da div */
+    object-fit: cover; /* Faz a imagem cobrir a área sem distorção */
 }
