@@ -1,7 +1,7 @@
-<div class="sidebar">
+<section class="sidebar">
         <img src="../assets/logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="navbar-item">
                 <li class="active"><i class="fas fa-home"></i> Início</li>
                 <li><i class="fas fa-bell"></i> Notificação</li>
                 <li><i class="fas fa-book"></i> Empréstimo</li>
@@ -9,4 +9,4 @@
                 <li><i class="fas fa-cog"></i> Configurações</li>
             </ul>
         </nav>
-    </div>
+</section>
