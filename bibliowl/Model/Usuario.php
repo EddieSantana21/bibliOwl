@@ -73,7 +73,7 @@ Class Usuario{
   public function cadastrar($usuario){
     //prepare statement
     $con = Conexao::conectar();
-    $stmt = $con->prepare("INSERT INTO tbUsuario(nomeUsuario, emailUsuario, senhaUsuario, telefoneUsuario, idTipoUsuario, registroUsuario)
+    $stmt = $con->prepare("INSERT INTO tbUsuarios(nome_usuario, email_usuario, senha_usuario, telefone_usuario, id_tipo, registro_usuario)
                             VALUES(?,?,?,?,?,?)");
     $stmt->bindValue(1, $usuario->getNomeUsuario());
     $stmt->bindValue(2, $usuario->getEmailUsuario());
@@ -86,7 +86,7 @@ Class Usuario{
 
 public function listar(){
     $conexao = Conexao::conectar();
-    $querySelect = "SELECT idUsuario, nomeUsuario, emailUsuario, telefoneUsuario, idTipoUsuario, registroUsuario from tbUsuario";
+    $querySelect = "SELECT id_usuario, nome_usuario, email_usuario, telefone_usuario, id_tipo, registro_usuario from tbUsuarios";
     $resultado = $conexao->query($querySelect);
     $lista = $resultado->fetchAll();
     return $lista;   

@@ -6,7 +6,7 @@ use PDOException;
 class Conexao2{
   // settar os atributos dentro de uma variável
   private $host = "localhost";
-  private $db_name = "bibliowfl";
+  private $db_name = "bibliow";
   private $username = "root";
   private $password = "";
 
@@ -23,6 +23,7 @@ class Conexao2{
       echo("teste");
     }catch(PDOException $error){
       echo "Error".$error->getMessage();
-    }
+    } return $this->conn;
   }
+  
 }
