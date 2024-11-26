@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../components/header/header.css">
     <link rel="stylesheet" href="../components/sectionEmprestimo/sectionEmprestimo.css">
     <link rel="stylesheet" href="../components/sectionCategoria/sectionCategoria.css">
+    <link rel="stylesheet" href="../components/sectionLivros/sectionLivros.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -29,6 +30,7 @@
         <?php require_once "../components/header/header.php"; ?>
         <?php require_once "../components/sectionEmprestimo/sectionEmprestimo.php"; ?>
         <?php require_once "../components/sectionCategoria/sectionCategoria.php"; ?>
+        <?php require_once "../components/sectionLivros/sectionLivros.php"; ?>
     </main>
 </body>
 
