@@ -1,0 +1,43 @@
+:root{
+    --on-secondary: #FFFFFF;
+    --secondary: #005065;
+    --surface-variant: #E8DFF1;
+    --on-surface-variant: #4A4453;
+}
+
+.livros {
+    padding: 0 20px 0 20px;
+}
+
+.livros h1 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.livros .categorias-livros{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.livros .categorias-livros .categoria{
+    background-color: var(--surface-variant);
+    color: var(--on-surface-variant);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.livros .categorias-livros .setas {
+    display: flex;
+}
+
+.livros .categorias-livros .setas li {
+    list-style-type: none; 
+    background-color: var(--surface-variant);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 0 8px 0 8px;
+}
