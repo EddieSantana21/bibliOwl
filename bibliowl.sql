@@ -77,15 +77,16 @@ CREATE TABLE IF NOT EXISTS tbAcervos (
     `data_lancamento` DATE,
     `qtd_acervo` INT,
     `cod_barras_acervo` VARCHAR(50),  -- Alterado para VARCHAR para acomodar códigos de barras
+    `isbn_acervo` VARCHAR(13),
     `id_autor` INT,
     `id_usuario` INT,
     `id_tipo_identificacao` INT,
     `id_editora` INT,
     `id_genero` INT,
-    `id_prateleira` INT,  -- Definir essa tabela, se necessário
-    `id_gondola` INT,     -- Definir essa tabela, se necessário
-    `id_numero_chamada_acervo` INT,
-    `id_status_acervo` INT,
+    `prateleira_acervo` INT,  -- Definir essa tabela, se necessário
+    `gondola_acervo` INT,     -- Definir essa tabela, se necessário
+    `num_chamada_acervo` INT,
+    `status_acervo` INT,
     FOREIGN KEY (`id_autor`) REFERENCES tbAutores(`id_autor`),
     FOREIGN KEY (`id_usuario`) REFERENCES tbUsuarios(`id_usuario`),
     FOREIGN KEY (`id_tipo_identificacao`) REFERENCES tbIdentificacaoPublicacaoAcervos(`id_tipo_identificacao`),
