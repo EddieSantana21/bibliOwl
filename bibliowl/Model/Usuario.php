@@ -73,14 +73,14 @@ Class Usuario{
   public function cadastrar($usuario){
     //prepare statement
     $con = Conexao::conectar();
-    $stmt = $con->prepare("INSERT INTO tbUsuarios(nome_usuario, email_usuario, senha_usuario, telefone_usuario, id_tipo, registro_usuario)
-                            VALUES(?,?,?,?,?,?)");
-    $stmt->bindValue(1, $usuario->getNomeUsuario());
-    $stmt->bindValue(2, $usuario->getEmailUsuario());
-    $stmt->bindValue(3, $usuario->getSenhaUsuario());
-    $stmt->bindValue(4, $usuario->getTelefoneUsuario());
-    $stmt->bindValue(5, $usuario->getIdTipoUsuario());
-    $stmt->bindValue(6,$usuario->getRegistroUsuario());
+    $stmt = $con->prepare("INSERT INTO tbUsuarios(id_usuario,nome_usuario, email_usuario, senha_usuario, telefone_usuario, id_tipo, registro_usuario)
+                            VALUES(null, :nomeUsuario, :emailUsuario, :senhaUsuario, :telefoneUsuario, :idTipo, :registroUsuario)");
+    $stmt->bindValue(':nomeUsuario', $usuario->getNomeUsuario());
+    $stmt->bindValue('emailUsuario', $usuario->getEmailUsuario());
+    $stmt->bindValue('senhaUsuario', $usuario->getSenhaUsuario());
+    $stmt->bindValue('telefoneUsuario', $usuario->getTelefoneUsuario());
+    $stmt->bindValue('idTipo', $usuario->getIdTipoUsuario());
+    $stmt->bindValue('registroUsuario',$usuario->getRegistroUsuario());
     $stmt->execute();
 }
 
