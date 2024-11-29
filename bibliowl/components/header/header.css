@@ -26,7 +26,13 @@ header input {
     margin: 0;
 }
 
-.nav-perfil h4 {
+.nav-perfil a svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-perfil h5 {
     font-family: Arial, sans-serif;
     font-weight: 500;
 }
@@ -41,6 +47,6 @@ header input {
 }
 
 .nav-perfil figure img {
-    width: 65%;
+    width: 56%;
     margin: 6px;
 }

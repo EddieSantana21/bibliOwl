@@ -21,7 +21,13 @@
   max-width: 100%;
   height: auto;
   margin-bottom: 5px 5px;
-  width: 50px;
+  width: 86%;
+}
+
+.logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
  
 .sidebar .navbar .navbar-item {
