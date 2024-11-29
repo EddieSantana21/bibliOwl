@@ -5,7 +5,7 @@ require_once("Conexao2.php");
 Class Comentario{
   private $idComentario;
   private $txtComentario;
-  private $idUsuario;
+  private $usuario;
   
   public function getIdComentario(){
     return $this->idComentario;
@@ -13,8 +13,8 @@ Class Comentario{
   public function getTxtComentario(){
     return $this->txtComentario;
   }
-  public function getIdUsuario(){
-    return $this->idUsuario;
+  public function getUsuario(){
+    return $this->usuario;
   }
   public function setIdComentario($idComentario){
     $this->idComentario = $idComentario;
@@ -22,8 +22,8 @@ Class Comentario{
   public function setTxtComentario($txtComentario){
     $this->txtComentario = $txtComentario;
   }
-  public function setIdUsuario($idUsuario){
-    $this->idUsuario = $idUsuario;
+  public function setIdUsuario($usuario){
+    $this->usuario = $usuario;
   }
 
   public function cadastrar($comentario){
@@ -31,7 +31,7 @@ Class Comentario{
     $con = Conexao::conectar();
     $stmt = $con->prepare("INSERT INTO tbComentario(comentario,id_usuario) VALUES(:txtComentario, :id_usuario)");
     $stmt->bindValue(':txtComentario', $comentario->getTxtComentario());
-    $stmt->bindValue(':idUsuario', $comentario->getIdUsuario());
+    $stmt->bindValue(':idUsuario', $comentario->getUsuario()->getIdUsuario());
     $stmt->execute();
 }
 public function listar(){

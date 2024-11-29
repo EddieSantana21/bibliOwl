@@ -6,8 +6,8 @@ Class Usuario{
   private $nomeUsuario;
   private $emailUsuario;
   private $senhaUsuario;
-  private $telefoneUsuario;
-  private $idTipoUsuario;
+  private $telefone;
+  private $tipoUsuario;
   private $registroUsuario;
 
   // getters
@@ -28,12 +28,12 @@ Class Usuario{
     return $this-> senhaUsuario;
   }
 
-  public function getTelefoneUsuario(){
-    return $this -> telefoneUsuario;
+  public function getTelefone(){
+    return $this -> telefone;
   }
 
-  public function getIdTipoUsuario(){
-    return $this -> idTipoUsuario;
+  public function tipoUsuario(){
+    return $this -> tipoUsuario;
   }
 
   public function getRegistroUsuario(){
@@ -58,12 +58,12 @@ Class Usuario{
     $this->senhaUsuario = $senhaUsuario;
   }
 
-  public function setTelefoneUsuario($telefoneUsuario){
-    $this->telefoneUsuario = $telefoneUsuario;
+  public function setTelefone($telefone){
+    $this->telefone = $telefone;
   }
 
-  public function setIdTipoUsuario($idTipoUsuario){
-    $this->idTipoUsuario = $idTipoUsuario;
+  public function setTipoUsuario($tipoUsuario){
+    $this->tipoUsuario = $tipoUsuario;
   }
 
   public function setRegistroUsuario($registroUsuario){
@@ -78,8 +78,8 @@ Class Usuario{
     $stmt->bindValue(':nomeUsuario', $usuario->getNomeUsuario());
     $stmt->bindValue('emailUsuario', $usuario->getEmailUsuario());
     $stmt->bindValue('senhaUsuario', $usuario->getSenhaUsuario());
-    $stmt->bindValue('telefoneUsuario', $usuario->getTelefoneUsuario());
-    $stmt->bindValue('idTipo', $usuario->getIdTipoUsuario());
+    $stmt->bindValue('telefoneUsuario', $usuario->getTelefone()->getIdTelefone());
+    $stmt->bindValue('idTipo', $usuario->getTipoUsuario()->getIdTipoUsuario);
     $stmt->bindValue('registroUsuario',$usuario->getRegistroUsuario());
     $stmt->execute();
 }
