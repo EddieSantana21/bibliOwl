@@ -71,6 +71,11 @@ CREATE TABLE IF NOT EXISTS tbIdentificacaoPublicacaoAcervos (
     `nome_identificacao` VARCHAR(100)
 );
 
+CREATE TABLE IF NOT EXISTS tbStatusAcervos (
+    `id_status_acervo` INT PRIMARY KEY AUTO_INCREMENT,
+    `status_livro` VARCHAR(100)
+);
+
 CREATE TABLE IF NOT EXISTS tbAcervos (
     `id_acervo` INT PRIMARY KEY AUTO_INCREMENT,
     `titulo_acervo` VARCHAR(100),
@@ -78,20 +83,21 @@ CREATE TABLE IF NOT EXISTS tbAcervos (
     `qtd_acervo` INT,
     `cod_barras_acervo` VARCHAR(50),  -- Alterado para VARCHAR para acomodar códigos de barras
     `isbn_acervo` VARCHAR(13),
+    `prateleira_acervo` INT,  -- Definir essa tabela, se necessário
+    `gondola_acervo` INT,     -- Definir essa tabela, se necessário
+    `num_chamada_acervo` INT,
+    `status_acervo` INT,
     `id_autor` INT,
     `id_usuario` INT,
     `id_tipo_identificacao` INT,
     `id_editora` INT,
     `id_genero` INT,
-    `prateleira_acervo` INT,  -- Definir essa tabela, se necessário
-    `gondola_acervo` INT,     -- Definir essa tabela, se necessário
-    `num_chamada_acervo` INT,
-    `status_acervo` INT,
     FOREIGN KEY (`id_autor`) REFERENCES tbAutores(`id_autor`),
     FOREIGN KEY (`id_usuario`) REFERENCES tbUsuarios(`id_usuario`),
     FOREIGN KEY (`id_tipo_identificacao`) REFERENCES tbIdentificacaoPublicacaoAcervos(`id_tipo_identificacao`),
     FOREIGN KEY (`id_editora`) REFERENCES tbEditoras(`id_editora`),
-    FOREIGN KEY (`id_genero`) REFERENCES tbGeneros(`id_genero`)
+    FOREIGN KEY (`id_genero`) REFERENCES tbGeneros(`id_genero`),
+    FOREIGN KEY (`status_acervo`) REFERENCES tbStatusAcervos(`id_status_acervo`)
 );
 
 CREATE TABLE IF NOT EXISTS tbClassificacoes (
@@ -105,16 +111,13 @@ CREATE TABLE IF NOT EXISTS tbClassificacoes (
 
 CREATE TABLE IF NOT EXISTS tbReservas (
     `id_reserva` INT PRIMARY KEY AUTO_INCREMENT,
+    `tempo_reserva` DATE,
     `id_acervo` INT,
     `id_usuario` INT,
     `status_acervo` INT,
     FOREIGN KEY (`id_acervo`) REFERENCES tbAcervos(`id_acervo`),
-    FOREIGN KEY (`id_usuario`) REFERENCES tbUsuarios(`id_usuario`)
-);
-
-CREATE TABLE IF NOT EXISTS tbStatusAcervos (
-    `id_status_acervo` INT PRIMARY KEY AUTO_INCREMENT,
-    `status_livro` VARCHAR(100)
+    FOREIGN KEY (`id_usuario`) REFERENCES tbUsuarios(`id_usuario`),
+    FOREIGN KEY (`status_acervo`) REFERENCES tbStatusAcervos(`id_status_acervo`)
 );
 
 CREATE TABLE IF NOT EXISTS tbEmprestimos (
@@ -127,6 +130,7 @@ CREATE TABLE IF NOT EXISTS tbEmprestimos (
     `id_acervo` INT,
     `situacao_emprestimo` VARCHAR(100),
     FOREIGN KEY (`id_usuario`) REFERENCES tbUsuarios(`id_usuario`),
+    FOREIGN KEY (`id_administrador`) REFERENCES tbUsuarios(`id_usuario`)
     FOREIGN KEY (`id_acervo`) REFERENCES tbAcervos(`id_acervo`)
 );
 

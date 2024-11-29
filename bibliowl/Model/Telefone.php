@@ -26,11 +26,11 @@ Class Telefone{
     $stmt->bindValue(1, $telefone->getNumTelefone());
     $stmt->execute();
 }
-public function listar(){
-  $conexao = Conexao::conectar();
-  $querySelect = "SELECT id_telefone, telefone from tbTelefone";
-  $resultado = $conexao->query($querySelect);
-  $lista = $resultado->fetchAll();
-  return $lista;   
-}
+  public function listar(){
+    $conexao = Conexao::conectar();
+    $querySelect = "SELECT id_telefone, telefone from tbTelefone";
+    $resultado = $conexao->query($querySelect);
+    $lista = $resultado->fetchAll();
+    return $lista;   
+  }
 }
