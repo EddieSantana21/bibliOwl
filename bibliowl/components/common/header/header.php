@@ -10,7 +10,7 @@
         </figure>
 
         <ul class="ul-perfil">
-            <li>Ver Perfil</li>
+            <a href="../../../pages/profile.php"></a>
             <li>Sair</li>
         </ul>
     </nav>
