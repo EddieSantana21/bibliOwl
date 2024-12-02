@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <?php require_once"../components/sidebar/sidebar.php";?>
+    <?php //require_once "../components/sidebar/sidebar.php";?>
+    <?php require_once "../components/common/sidebar/sidebar.php";?>
     <div class="main-content">
         <header>
             <input type="text" class="search-bar" placeholder="Pesquisar...">
