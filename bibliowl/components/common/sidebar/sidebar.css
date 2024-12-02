@@ -45,6 +45,10 @@
   cursor: pointer;
   color: var(--on-surface);
 }
+
+.sidebar .navbar .navbar-item a {
+  text-decoration: none;
+}
  
 .sidebar .navbar .navbar-item .item i.icon {
   display: inline-block;
