@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS dbBibliowl;
+CREATE DATABASE IF NOT EXISTS dbbibliowl;
 
-USE dbBibliowl;
+USE dbbibliowl;
 
 CREATE TABLE IF NOT EXISTS tbTiposUsuarios (
     `id_tipo` INT PRIMARY KEY AUTO_INCREMENT,
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS tbEmprestimos (
     `id_acervo` INT,
     `situacao_emprestimo` VARCHAR(100),
     FOREIGN KEY (`id_usuario`) REFERENCES tbUsuarios(`id_usuario`),
-    FOREIGN KEY (`id_administrador`) REFERENCES tbUsuarios(`id_usuario`)
+    FOREIGN KEY (`id_administrador`) REFERENCES tbUsuarios(`id_usuario`),
     FOREIGN KEY (`id_acervo`) REFERENCES tbAcervos(`id_acervo`)
 );
 

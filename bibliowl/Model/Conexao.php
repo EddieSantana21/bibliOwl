@@ -1,30 +1,10 @@
 <?php
-
-class Conexao
-{
-    public static function conectar()
-    {
-        /* explicação do código
-            $variavel = new PDO(
-                tipo:host=local; 
-                dbname=nome do banco,
-                usuário de acesso ao banco, 
-                senha de acesso ao banco
-            )
-        */
-        // conexão local
-        $conexao = new PDO("mysql:host=localhost;
-                           dbname=bibliowl", 
-                           "root",
-                           "");
-
-        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $conexao->exec("SET CHARACTER SET utf8");
-        
-        return $conexao;
-
-       
-    }
-    
+class Conexao {
+	public static function conectar() {
+		$conexao = new PDO("mysql:host=localhost;dbname=dbbibliowl", "root", "");
+		$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$conexao->exec("SET CHARACTER SET utf8");
+		return $conexao;
+	}
 }
-
+?>
