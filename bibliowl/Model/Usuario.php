@@ -1,5 +1,5 @@
 <?php 
-require_once("Conexao2C.php");
+require_once("Conexao.php");
 
 Class Usuario{
   private $idUsuario;
@@ -72,8 +72,8 @@ Class Usuario{
 
   public function cadastrar($usuario){
     //prepare statement
-    $con = Conexao::conectar();
-    $stmt = $con->prepare("INSERT INTO tbUsuarios(id_usuario,nome_usuario, email_usuario, senha_usuario, telefone_usuario, id_tipo, registro_usuario)
+    $conexao = Conexao::conectar();
+    $stmt = $conexao->prepare("INSERT INTO tbUsuarios(id_usuario,nome_usuario, email_usuario, senha_usuario, telefone_usuario, id_tipo, registro_usuario)
                             VALUES(null, :nomeUsuario, :emailUsuario, :senhaUsuario, :telefoneUsuario, :idTipo, :registroUsuario)");
     $stmt->bindValue(':nomeUsuario', $usuario->getNomeUsuario());
     $stmt->bindValue('emailUsuario', $usuario->getEmailUsuario());
@@ -84,12 +84,11 @@ Class Usuario{
     $stmt->execute();
 }
 
-public function listar(){
-    $conexao = Conexao::conectar();
-    $querySelect = "SELECT id_usuario, nome_usuario, email_usuario, telefone_usuario, id_tipo, registro_usuario from tbUsuarios";
-    $resultado = $conexao->query($querySelect);
-    $lista = $resultado->fetchAll();
-    return $lista;   
+    public function listar() {
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare("SELECT * FROM tbusuarios");
+        $stmt->execute();
+        return $stmt;
 }
 }
 
