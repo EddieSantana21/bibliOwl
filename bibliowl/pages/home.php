@@ -34,5 +34,5 @@
         <?php require_once "../components/home/sectionLivros/sectionLivros.php"; ?>
     </main>
 </body>
-
+<script src="../components/common/header/header.js"></script>
 </html>

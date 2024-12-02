@@ -1,5 +1,7 @@
 :root {
     --surface-variant: #E8DFF1;
+    --surface: #E7E0EB;
+    --on-surface: #49454E;
 }
 
 header {
@@ -8,7 +10,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 12px 0 12px;
 }
 
 header input {
@@ -18,35 +19,73 @@ header input {
     border: none;
     background-color: var(--surface-variant);
     padding: 16px;
+    margin: 0 20px;
 }
 
 .nav-perfil {
     display: flex;
     align-items: center;
     margin: 0;
+    width: 20%;
+    height: 10%;
 }
 
-.nav-perfil a svg {
+.nav-perfil .drop-dawn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-perfil .drop-dawn button svg {
+    margin: 0 2px;
+    position: relative;
+}
+
+.nav-perfil .profile-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
 
-.nav-perfil h5 {
-    font-family: Arial, sans-serif;
-    font-weight: 500;
+.nav-perfil .profile-container img {
+    width: 36px;
+    height: 36px;
+    margin: 0 8px;
 }
 
-.nav-perfil .ul-perfil {
+.nav-perfil .profile-container h5 {
+    font-weight: 200;
+    margin: 0 8px;
+}
+
+.nav-perfil .menu-perfil .ul-perfil {
+    margin-top: 8px;
+    list-style-type: none;
+    position: absolute;
+    background-color: var(--surface);
+    width: 10%;
+    border: 0.5px solid var(--on-surface);
+    border-radius: 8px;
+    padding: 16px;
     display: none;
 }
 
-.nav-perfil figure {
-    margin: 0 0 0 8px;
-    padding: 0;
+.nav-perfil .menu-perfil .ul-perfil li a {
+    text-decoration: none;
+    color: var(--on-surface);
+    display: flex;
+
 }
 
-.nav-perfil figure img {
-    width: 56%;
-    margin: 6px;
+.nav-perfil .menu-perfil .ul-perfil li svg {
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.arrow {
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+.arrow.rotated {
+    transform: rotate(180deg); /* Gira a seta para cima */
 }
