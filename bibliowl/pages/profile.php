@@ -19,5 +19,5 @@
         <?php require_once "../components/profile/sectionInformation/sectionInformation.php"; ?>
     </main>
 </body>
-
+<script src="../components/common/header/header.js"></script>
 </html>
