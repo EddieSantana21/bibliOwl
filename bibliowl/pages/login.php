@@ -12,20 +12,21 @@
 <body>
     <section>
         <div class="page">
-            <form method="POST" class="formLogin" action="components/validacao/validarLogin.php">
+            <!-- <form method="POST" class="formLogin" action="components/validacao/validarLogin.php"> -->
+            <form method="POST" class="formLogin" action="../components/validacao/validarLogin.php">
                 <h1>Login</h1>
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
                 <label for="email">E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+                <input type="email" id="emailUsuario" name="emailUsuario" placeholder="Digite seu e-mail" autofocus="true" />
                 <label for="password">Senha</label>
-                <input type="password" placeholder="Digite sua senha" />
+                <input type="password" id="senhaUsuario" name="senhaUsuario" placeholder="Digite sua senha" />
 
                 <a href="/">Esqueci minha senha</a>
-                
+
                 <input type="submit" value="Acessar" class="btn" />
-                <!-- <input type="button" value="Criar conta" class="btn" /> -->
                 <a href="register/cadastro1.php" class="text-criar-conta">Criar conta</a>
             </form>
+
         </div>
     </section>
 
