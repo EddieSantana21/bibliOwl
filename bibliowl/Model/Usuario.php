@@ -1,7 +1,8 @@
-<?php 
+<?php
 require_once("Conexao.php");
 
-Class Usuario{
+class Usuario
+{
   private $idUsuario;
   private $nomeUsuario;
   private $emailUsuario;
@@ -12,65 +13,80 @@ Class Usuario{
 
   // getters
 
-  public function getIdUsuario(){
-    return $this-> idUsuario;
+  public function getIdUsuario()
+  {
+    return $this->idUsuario;
   }
 
-  public function getNomeUsuario(){
-    return $this-> nomeUsuario;
+  public function getNomeUsuario()
+  {
+    return $this->nomeUsuario;
   }
 
-  public function getEmailUsuario(){
-    return $this-> emailUsuario;
+  public function getEmailUsuario()
+  {
+    return $this->emailUsuario;
   }
 
-  public function getSenhaUsuario(){
-    return $this-> senhaUsuario;
+  public function getSenhaUsuario()
+  {
+    return $this->senhaUsuario;
   }
 
-  public function getTelefone(){
-    return $this -> telefone;
+  public function getTelefone()
+  {
+    return $this->telefone;
   }
 
-  public function tipoUsuario(){
-    return $this -> tipoUsuario;
+  public function tipoUsuario()
+  {
+    return $this->tipoUsuario;
   }
 
-  public function getRegistroUsuario(){
-    return $this-> registroUsuario;
+  public function getRegistroUsuario()
+  {
+    return $this->registroUsuario;
   }
 
   //setters
 
-  public function setIdUsuario($idUsuario){
+  public function setIdUsuario($idUsuario)
+  {
     $this->idUsuario = $idUsuario;
   }
 
-  public function setNomeUsuario($nomeUsuario){
+  public function setNomeUsuario($nomeUsuario)
+  {
     $this->nomeUsuario = $nomeUsuario;
   }
 
-  public function setEmailUsuario($emailUsuario){
+  public function setEmailUsuario($emailUsuario)
+  {
     $this->emailUsuario = $emailUsuario;
   }
 
-  public function setSenhaUsuario($senhaUsuario){
+  public function setSenhaUsuario($senhaUsuario)
+  {
     $this->senhaUsuario = $senhaUsuario;
   }
 
-  public function setTelefone($telefone){
+  public function setTelefone($telefone)
+  {
     $this->telefone = $telefone;
   }
 
-  public function setTipoUsuario($tipoUsuario){
+  public function setTipoUsuario($tipoUsuario)
+  {
     $this->tipoUsuario = $tipoUsuario;
   }
 
-  public function setRegistroUsuario($registroUsuario){
+  public function setRegistroUsuario($registroUsuario)
+  {
     $this->registroUsuario = $registroUsuario;
   }
 
-  public function cadastrar($usuario){
+  public function cadastrar($usuario)
+  {
     //prepare statement
     $conexao = Conexao::conectar();
     $stmt = $conexao->prepare("INSERT INTO tbUsuarios(id_usuario,nome_usuario, email_usuario, senha_usuario, telefone_usuario, id_tipo, registro_usuario)
@@ -80,15 +96,15 @@ Class Usuario{
     $stmt->bindValue('senhaUsuario', $usuario->getSenhaUsuario());
     $stmt->bindValue('telefoneUsuario', $usuario->getTelefone()->getIdTelefone());
     $stmt->bindValue('idTipo', $usuario->getTipoUsuario()->getIdTipoUsuario);
-    $stmt->bindValue('registroUsuario',$usuario->getRegistroUsuario());
+    $stmt->bindValue('registroUsuario', $usuario->getRegistroUsuario());
     $stmt->execute();
-}
+  }
 
-    public function listar() {
-        $conexao = Conexao::conectar();
-        $stmt = $conexao->prepare("SELECT * FROM tbusuarios");
-        $stmt->execute();
-        return $stmt;
+  public function listar()
+  {
+    $conexao = Conexao::conectar();
+    $stmt = $conexao->prepare("SELECT * FROM tbusuarios");
+    $stmt->execute();
+    return $stmt;
+  }
 }
-}
-
