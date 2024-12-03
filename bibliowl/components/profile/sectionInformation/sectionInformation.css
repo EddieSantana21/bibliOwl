@@ -1,27 +1,120 @@
-.card-profile h4 {
-    font-weight: 300;
-    font-size: 20px;
+:root {
+    --inverse-on-surface: #F5EFF7;
+    --tertiary: #854B71;
+    --surface-variant: #E7E0EB;
 }
 
-.card-profile .image-profile {
+h4 {
+    font-weight: 300;
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+
+.card-profile {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: var(--surface-variant);
+    border-radius: 24px;
+    margin: 0 20px;
+    padding: 24px;
+}
+
+.card-profile form {
+    display: block;
+}
+
+.card-profile .form-profile .image-profile {
     width: 120px;
     height: 120px;
     border: 50%;
-}
-
-.card-profile .image-profile img {
-    width: 100%;
-    height: 100%; 
-}
-
-.card-profile .image-profile svg {
+    display: flex;
     position: relative;
 }
-
-.card-profile .image-profile input {
+.card-profile .form-profile .image-profile .edit {
     position: absolute;
+    top: 86px;
+    left: 86px;
+
+}
+
+.card-profile .form-profile .image-profile .nome-curso {
+    margin-left: 24px;
+}
+
+.card-profile .form-profile .tel-data {
+    display: flex;
+    margin-top: 24px;
+}
+
+.card-profile .form-profile .tel-data .input-tel {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-profile .form-profile .tel-data {
+    display: flex;
+    margin: 24px 24px;
+    gap: 16px; /* Adicionado para o espaçamento */
+}
+
+.card-profile .form-profile .tel-data .input-tel,
+.card-profile .form-profile .tel-data .input-data {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz os inputs ocuparem mais espaço */
+}
+
+.card-profile .form-profile .image-profile  img {
+    width: 100%;
+    height: 100%;
 }
 
 input[type="file"] {
     display: none;
+}
+
+.card-profile .form-profile .image-profile svg {
+    background-color: var(--inverse-on-surface);
+    border-radius: 50%;
+    padding: 6px;
+    bottom: 36px;
+    left: 86px;
+}
+
+.card-profile .form-profile input {
+    background-color: var(--inverse-on-surface);
+    border-radius: 8px;
+    border: none;
+    height: 36px;
+    margin: 8px 0;
+    width: 100%; /* Ajusta largura */
+    box-sizing: border-box; /* Garante alinhamento */
+}
+.card-profile .form-profile .btn-salvar {
+    background-color: var(--tertiary);
+    color: #fff;
+    border: none;
+    height: 36px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+input::placeholder {
+    padding: 12px;
+}
+
+.card-profile .form-profile .image-profile .nome-curso input {
+    width: auto; /* Ajusta apenas os inputs desta seção */
+    min-width: 230px; /* Define um tamanho máximo, caso necessário */
+    box-sizing: border-box;
+}
+
+.card-profile .form-profile .nome-curso .input-profile {
+    background-color: var(--inverse-on-surface);
+    border-radius: 8px;
+    border: none;
+    height: 36px;
+    width: 100%; /* Inputs ocupam toda a largura disponível */
+    max-width: 500px; /* Limite de largura para ficar maior */
 }
