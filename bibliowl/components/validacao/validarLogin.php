@@ -2,14 +2,14 @@
 require_once("../../Model/Conexao.php");
 require_once("../../Model/Usuario.php");
 
-if(isset($_POST['emailUsuario']) && isset($_POST['senhaUsuario'])){
-
-    print_r($_POST['emailUsuario']);
-    print_r($_POST['senhaUsuario']);
+if (isset($_POST['emailUsuario']) && isset($_POST['senhaUsuario'])) {
+    $emailUsuario = $_POST['emailUsuario'];
+    $senhaUsuario = $_POST['senhaUsuario'];
 
 $usuario = new Usuario();
 $usuario->setEmailUsuario($emailUsuario);
 $usuario->setSenhaUsuario($senhaUsuario);
+echo "deu certo até aqui";
 foreach ($usuario as $rowUsuario) {
     echo $rowUsuario->listar($usuario);
 }
